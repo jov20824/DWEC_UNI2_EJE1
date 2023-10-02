@@ -22,7 +22,7 @@ function propuestaUsuario(nombreC){
     nombreC = nombreC.toLowerCase();
     var lista = nombreC.split(" ");
     var nombreUsuario1 = lista[0]+(lista[1].charAt(0))+(lista[2].charAt(0));
-    var nombreUsuario2 = (lista[0].slice(0,2))+(lista[1].slice(0,1))+(lista[2].slice(0,1));
+    var nombreUsuario2 = (lista[0].slice(0,2))+(lista[1].slice(0,2))+(lista[2].slice(0,2));
     console.log("Nombre de usuario recomendado 1: "+nombreUsuario1);
     console.log("Nombre de usuario recomendado 2: "+nombreUsuario2);
 }
@@ -31,9 +31,13 @@ function contrasenia(nombreC){
     var lista =nombreC.split(" ");
     var contrasenia="";
     for(var i=0;i<lista[0].length;i++){
-        contrasenia += lista[1].charAt(i)+i;
+        contrasenia += lista[0].charAt(i)+i;
     }
     return contrasenia;
 }
+console.log(contar(nombreCompleto));
+console.log(mayusculas(nombreCompleto));
+console.log(minusculas(nombreCompleto));
+imprimir(nombreCompleto);
 propuestaUsuario(nombreCompleto);
 console.log(contrasenia(nombreCompleto));
